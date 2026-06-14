@@ -1,0 +1,1346 @@
+<!doctype html>
+<html lang="ka">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>
+      FIT FACTORY — Build Your Strongest Version | Gym, Fitness Center &
+      Personal Training
+    </title>
+    <meta
+      name="description"
+      content="FIT FACTORY is a premium fitness club offering strength training, personal training, weight loss programs and functional training. Train smarter. Move faster. Become stronger."
+    />
+    <meta
+      name="keywords"
+      content="gym, fitness center, personal training, weight loss, strength training, fitness club, functional training, nutrition"
+    />
+    <meta name="author" content="FIT FACTORY" />
+
+    <!-- Open Graph -->
+    <meta
+      property="og:title"
+      content="FIT FACTORY — Build Your Strongest Version"
+    />
+    <meta
+      property="og:description"
+      content="Train smarter. Move faster. Become stronger with FIT FACTORY."
+    />
+    <meta property="og:type" content="website" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="shortcut icon"
+      href="./fitFactory logo.ico"
+      type="image/x-icon"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Structured Data (SEO) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "HealthClub",
+        "name": "FIT FACTORY",
+        "description": "Premium fitness club & gym offering strength training, personal training and weight loss programs.",
+        "telephone": "+995 32 2 054 240",
+        "email": "hello@fitfactory.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "B. Kvernadze St. 7 / P. Aslanidi St. 12",
+          "addressLocality": "Tbilisi",
+          "addressCountry": "GE"
+        },
+        "openingHours": "Mo-Su 06:00-23:00",
+        "priceRange": "$$"
+      }
+    </script>
+  </head>
+  <body>
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+      <div class="preloader__logo">
+        <img
+          src="fitFactory logo.jpg"
+          alt="FIT FACTORY"
+          class="preloader__img"
+        />
+      </div>
+      <div class="preloader__bar"><span id="preloaderBar"></span></div>
+    </div>
+
+    <!-- Inline SVG sprite (logo + icons) -->
+    <svg style="display: none" xmlns="http://www.w3.org/2000/svg">
+      <symbol id="ff-athlete" viewBox="0 0 64 64">
+        <!-- Geometric running athlete with motion fragments -->
+        <circle cx="41" cy="11" r="5" />
+        <path d="M44 18 L33 30 L42 34 L36 50 L31 49 L35 37 L24 33 L31 22 Z" />
+        <path d="M33 30 L48 33 L46 39 L32 36 Z" />
+        <rect x="4" y="20" width="14" height="3" rx="1.5" opacity="0.85" />
+        <rect x="2" y="29" width="20" height="3" rx="1.5" opacity="0.55" />
+        <rect x="6" y="38" width="12" height="3" rx="1.5" opacity="0.35" />
+      </symbol>
+      <symbol id="i-trainer" viewBox="0 0 24 24">
+        <path
+          d="M12 12a4 4 0 100-8 4 4 0 000 8zm-7 9a7 7 0 0114 0"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.7"
+          stroke-linecap="round"
+        />
+      </symbol>
+      <symbol id="i-dumbbell" viewBox="0 0 24 24">
+        <path
+          d="M3 9v6M6 7v10M18 7v10M21 9v6M6 12h12"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+        />
+      </symbol>
+      <symbol id="i-target" viewBox="0 0 24 24">
+        <circle
+          cx="12"
+          cy="12"
+          r="8"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.7"
+        />
+        <circle
+          cx="12"
+          cy="12"
+          r="3.5"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.7"
+        />
+        <circle
+          cx="12"
+          cy="12"
+          r="0.6"
+          fill="currentColor"
+          stroke="currentColor"
+        />
+      </symbol>
+      <symbol id="i-community" viewBox="0 0 24 24">
+        <circle
+          cx="8"
+          cy="9"
+          r="3"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+        />
+        <circle
+          cx="17"
+          cy="10"
+          r="2.4"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+        />
+        <path
+          d="M2.5 19a5.5 5.5 0 0111 0M14 19a4.5 4.5 0 017.5-3.3"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+          stroke-linecap="round"
+        />
+      </symbol>
+      <symbol id="i-strength" viewBox="0 0 24 24">
+        <path
+          d="M4 8v8M7 6v12M17 6v12M20 8v8M7 12h10"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+        />
+      </symbol>
+      <symbol id="i-flame" viewBox="0 0 24 24">
+        <path
+          d="M12 3c1 3-2 4-2 7a2 2 0 104 0c0-1-.3-1.6-.3-1.6 2 1.4 3.3 3.6 3.3 6a5 5 0 11-10 0c0-4 3-5 5-11.4z"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+          stroke-linejoin="round"
+        />
+      </symbol>
+      <symbol id="i-pulse" viewBox="0 0 24 24">
+        <path
+          d="M3 12h4l2-5 4 12 2-7h6"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </symbol>
+      <symbol id="i-group" viewBox="0 0 24 24">
+        <circle
+          cx="6"
+          cy="8"
+          r="2.3"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+        />
+        <circle
+          cx="12"
+          cy="6.5"
+          r="2.3"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+        />
+        <circle
+          cx="18"
+          cy="8"
+          r="2.3"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+        />
+        <path
+          d="M2 18a4 4 0 018 0M8 17a4 4 0 018 0M14 18a4 4 0 018 0"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.5"
+          stroke-linecap="round"
+        />
+      </symbol>
+      <symbol id="i-leaf" viewBox="0 0 24 24">
+        <path
+          d="M5 19c0-8 6-14 14-14 0 8-6 14-14 14zM5 19c3-3 6-5 10-6"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </symbol>
+      <symbol id="i-phone" viewBox="0 0 24 24">
+        <path
+          d="M5 4h4l2 5-3 2a11 11 0 005 5l2-3 5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2z"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+          stroke-linejoin="round"
+        />
+      </symbol>
+      <symbol id="i-mail" viewBox="0 0 24 24">
+        <rect
+          x="3"
+          y="5"
+          width="18"
+          height="14"
+          rx="2"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+        />
+        <path
+          d="M4 7l8 6 8-6"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+        />
+      </symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24">
+        <path
+          d="M12 21s7-6 7-11a7 7 0 10-14 0c0 5 7 11 7 11z"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+        />
+        <circle
+          cx="12"
+          cy="10"
+          r="2.5"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+        />
+      </symbol>
+      <symbol id="i-star" viewBox="0 0 24 24">
+        <path
+          d="M12 2l2.9 6.3 6.9.7-5.1 4.6 1.4 6.8L12 17.8 5.9 20.4l1.4-6.8L2.2 9l6.9-.7z"
+          fill="currentColor"
+        />
+      </symbol>
+      <symbol id="i-check" viewBox="0 0 24 24">
+        <path
+          d="M5 13l4 4L19 7"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2.2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </symbol>
+    </svg>
+
+    <!-- Cursor glow -->
+    <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+    <!-- Scroll progress -->
+    <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+    <!-- ===== HEADER ===== -->
+    <header class="header" id="header">
+      <a href="#hero" class="brand" aria-label="FIT FACTORY home">
+        <img
+          src="fitFactory logo.jpg"
+          alt=""
+          class="brand__logo"
+          aria-hidden="true"
+        />
+        <span class="brand__name">FIT<span>FACTORY</span></span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Main">
+        <a href="#why">Why Us</a>
+        <a href="#services">Services</a>
+        <a href="#plans">Plans</a>
+        <a href="#schedule">Schedule</a>
+        <a href="#trainers">Trainers</a>
+        <a href="#results">Results</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <a href="#contact" class="btn btn--solid header__cta">Join Now</a>
+
+      <button
+        class="burger"
+        id="burger"
+        aria-label="Open menu"
+        aria-expanded="false"
+      >
+        <span></span><span></span><span></span>
+      </button>
+    </header>
+
+    <main>
+      <!-- ===== HERO ===== -->
+      <section class="hero" id="hero">
+        <div class="hero__bg" data-speed="0.2"></div>
+        <div class="hero__overlay"></div>
+        <div class="hero__grid"></div>
+
+        <div class="hero__inner">
+          <p class="hero__eyebrow reveal-up">
+            PREMIUM FITNESS CLUB · EST. 2014
+          </p>
+          <h1 class="hero__title">
+            <span class="line"><span>BUILD YOUR</span></span>
+            <span class="line"><span class="stroke">STRONGEST</span></span>
+            <span class="line"><span>VERSION</span></span>
+          </h1>
+          <p class="hero__sub reveal-up">
+            Train smarter. Move faster. Become stronger with
+            <strong>FIT FACTORY</strong>.
+          </p>
+          <div class="hero__cta reveal-up">
+            <a href="#plans" class="btn btn--solid">Join Now</a>
+            <a href="#contact" class="btn btn--ghost">Free Trial</a>
+          </div>
+
+          <div class="hero__stats reveal-up">
+            <div>
+              <strong data-count="4200">0</strong><span>Active Members</span>
+            </div>
+            <div>
+              <strong data-count="28">0</strong><span>Expert Trainers</span>
+            </div>
+            <div>
+              <strong data-count="120">0</strong><span>Weekly Classes</span>
+            </div>
+            <div>
+              <strong data-count="11">0</strong><span>Years of Power</span>
+            </div>
+          </div>
+        </div>
+
+        <a href="#why" class="hero__scroll" aria-label="Scroll down">
+          <span>SCROLL</span><i></i>
+        </a>
+      </section>
+
+      <!-- Marquee -->
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee__track">
+          <span>STRENGTH ·</span><span>SPEED ·</span
+          ><span>TRANSFORMATION ·</span><span>DISCIPLINE ·</span
+          ><span>PERFORMANCE ·</span><span>GROWTH ·</span>
+          <span>STRENGTH ·</span><span>SPEED ·</span
+          ><span>TRANSFORMATION ·</span><span>DISCIPLINE ·</span
+          ><span>PERFORMANCE ·</span><span>GROWTH ·</span>
+        </div>
+      </div>
+
+      <!-- ===== WHY FIT FACTORY ===== -->
+      <section class="section" id="why">
+        <div class="container">
+          <div class="section__head">
+            <p class="kicker reveal-up">Why FIT FACTORY</p>
+            <h2 class="section__title reveal-up">
+              Where transformation <span class="stroke">happens</span>
+            </h2>
+            <p class="section__lead reveal-up">
+              Everything you need to perform at your peak — under one roof,
+              engineered for results.
+            </p>
+          </div>
+
+          <div class="why-grid">
+            <article class="feature reveal-up">
+              <span class="feature__icon"
+                ><svg viewBox="0 0 24 24"><use href="#i-trainer" /></svg
+              ></span>
+              <h3>Professional Trainers</h3>
+              <p>
+                Certified coaches who build programs around your body, your
+                goals and your pace.
+              </p>
+            </article>
+            <article class="feature reveal-up">
+              <span class="feature__icon"
+                ><svg viewBox="0 0 24 24"><use href="#i-dumbbell" /></svg
+              ></span>
+              <h3>Modern Equipment</h3>
+              <p>
+                Technogym-grade machines and free weights, maintained to
+                performance standards.
+              </p>
+            </article>
+            <article class="feature reveal-up">
+              <span class="feature__icon"
+                ><svg viewBox="0 0 24 24"><use href="#i-target" /></svg
+              ></span>
+              <h3>Personalized Programs</h3>
+              <p>
+                Data-driven plans that adapt as you grow stronger, week after
+                week.
+              </p>
+            </article>
+            <article class="feature reveal-up">
+              <span class="feature__icon"
+                ><svg viewBox="0 0 24 24"><use href="#i-community" /></svg
+              ></span>
+              <h3>Community Support</h3>
+              <p>
+                Train alongside a motivated crew that pushes you past every
+                limit.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== SERVICES ===== -->
+      <section class="section section--alt" id="services">
+        <div class="container">
+          <div class="section__head">
+            <p class="kicker reveal-up">Our Services</p>
+            <h2 class="section__title reveal-up">
+              Train your way to <span class="stroke">greatness</span>
+            </h2>
+            <p class="section__lead reveal-up">
+              Six disciplines, one mission — your strongest version.
+            </p>
+          </div>
+
+          <div class="services-grid">
+            <article class="service reveal-up">
+              <span class="service__icon"
+                ><svg viewBox="0 0 24 24"><use href="#i-strength" /></svg
+              ></span>
+              <h3>Strength Training</h3>
+              <p>
+                Build raw power and lean muscle with progressive overload
+                programming.
+              </p>
+              <span class="service__arrow">→</span>
+            </article>
+            <article class="service reveal-up">
+              <span class="service__icon"
+                ><svg viewBox="0 0 24 24"><use href="#i-trainer" /></svg
+              ></span>
+              <h3>Personal Training</h3>
+              <p>
+                One-on-one coaching tailored entirely to your goals and
+                schedule.
+              </p>
+              <span class="service__arrow">→</span>
+            </article>
+            <article class="service reveal-up">
+              <span class="service__icon"
+                ><svg viewBox="0 0 24 24"><use href="#i-flame" /></svg
+              ></span>
+              <h3>Weight Loss Programs</h3>
+              <p>
+                Burn fat fast with structured training and metabolic
+                conditioning.
+              </p>
+              <span class="service__arrow">→</span>
+            </article>
+            <article class="service reveal-up">
+              <span class="service__icon"
+                ><svg viewBox="0 0 24 24"><use href="#i-pulse" /></svg
+              ></span>
+              <h3>Functional Training</h3>
+              <p>
+                Move better in life and sport with mobility, balance and core
+                power.
+              </p>
+              <span class="service__arrow">→</span>
+            </article>
+            <article class="service reveal-up">
+              <span class="service__icon"
+                ><svg viewBox="0 0 24 24"><use href="#i-group" /></svg
+              ></span>
+              <h3>Group Classes</h3>
+              <p>
+                High-energy sessions — HIIT, spin and bootcamp — fueled by the
+                crowd.
+              </p>
+              <span class="service__arrow">→</span>
+            </article>
+            <article class="service reveal-up">
+              <span class="service__icon"
+                ><svg viewBox="0 0 24 24"><use href="#i-leaf" /></svg
+              ></span>
+              <h3>Nutrition Guidance</h3>
+              <p>
+                Personalized meal plans that turn your training into real
+                results.
+              </p>
+              <span class="service__arrow">→</span>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== MEMBERSHIP PLANS ===== -->
+      <section class="section" id="plans">
+        <div class="container">
+          <div class="section__head">
+            <p class="kicker reveal-up">Membership Plans</p>
+            <h2 class="section__title reveal-up">
+              Choose your <span class="stroke">commitment</span>
+            </h2>
+            <p class="section__lead reveal-up">
+              No contracts. Cancel anytime. Every plan unlocks your strongest
+              self.
+            </p>
+          </div>
+
+          <div class="plans-grid">
+            <article class="plan reveal-up">
+              <h3 class="plan__name">BASIC</h3>
+              <p class="plan__price">
+                <span class="cur">$</span>29<small>/mo</small>
+              </p>
+              <p class="plan__desc">Everything you need to start strong.</p>
+              <ul class="plan__features">
+                <li>
+                  <svg viewBox="0 0 24 24"><use href="#i-check" /></svg>Full gym
+                  floor access
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24"><use href="#i-check" /></svg>2 group
+                  classes / week
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24"><use href="#i-check" /></svg>Locker &
+                  shower access
+                </li>
+                <li class="muted">
+                  <svg viewBox="0 0 24 24"><use href="#i-check" /></svg>Personal
+                  training
+                </li>
+                <li class="muted">
+                  <svg viewBox="0 0 24 24"><use href="#i-check" /></svg
+                  >Nutrition plan
+                </li>
+              </ul>
+              <a href="#contact" class="btn btn--ghost plan__cta"
+                >Get Started</a
+              >
+            </article>
+
+            <article class="plan plan--featured reveal-up">
+              <span class="plan__badge">MOST POPULAR</span>
+              <h3 class="plan__name">STANDARD</h3>
+              <p class="plan__price">
+                <span class="cur">$</span>59<small>/mo</small>
+              </p>
+              <p class="plan__desc">The complete training experience.</p>
+              <ul class="plan__features">
+                <li>
+                  <svg viewBox="0 0 24 24"><use href="#i-check" /></svg
+                  >Unlimited gym access
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24"><use href="#i-check" /></svg
+                  >Unlimited group classes
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24"><use href="#i-check" /></svg>2 PT
+                  sessions / month
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24"><use href="#i-check" /></svg>Body
+                  composition tracking
+                </li>
+                <li class="muted">
+                  <svg viewBox="0 0 24 24"><use href="#i-check" /></svg>Custom
+                  nutrition plan
+                </li>
+              </ul>
+              <a href="#contact" class="btn btn--solid plan__cta"
+                >Get Started</a
+              >
+            </article>
+
+            <article class="plan reveal-up">
+              <h3 class="plan__name">PREMIUM</h3>
+              <p class="plan__price">
+                <span class="cur">$</span>99<small>/mo</small>
+              </p>
+              <p class="plan__desc">Elite, fully personalized coaching.</p>
+              <ul class="plan__features">
+                <li>
+                  <svg viewBox="0 0 24 24"><use href="#i-check" /></svg
+                  >Everything in Standard
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24"><use href="#i-check" /></svg
+                  >Unlimited personal training
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24"><use href="#i-check" /></svg>Custom
+                  nutrition plan
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24"><use href="#i-check" /></svg>Recovery
+                  & spa access
+                </li>
+                <li>
+                  <svg viewBox="0 0 24 24"><use href="#i-check" /></svg>Priority
+                  booking 24/7
+                </li>
+              </ul>
+              <a href="#contact" class="btn btn--ghost plan__cta"
+                >Get Started</a
+              >
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== CLASS SCHEDULE ===== -->
+      <section class="section section--alt" id="schedule">
+        <div class="container">
+          <div class="section__head">
+            <p class="kicker reveal-up">Weekly Timetable</p>
+            <h2 class="section__title reveal-up">
+              Find your <span class="stroke">class</span>
+            </h2>
+            <p class="section__lead reveal-up">
+              Group sessions every day of the week. Pick your day, book your
+              spot.
+            </p>
+          </div>
+
+          <div class="schedule reveal-up">
+            <div
+              class="schedule__days"
+              id="scheduleDays"
+              role="tablist"
+              aria-label="Days of the week"
+            ></div>
+            <div
+              class="schedule__panel"
+              id="schedulePanel"
+              aria-live="polite"
+            ></div>
+            <p class="schedule__note">
+              All classes are 60 minutes. Booking opens 24h in advance for
+              members.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== TRAINERS ===== -->
+      <section class="section section--alt trainers" id="trainers">
+        <div class="container">
+          <div class="section__head section__head--row">
+            <div>
+              <p class="kicker reveal-up">Meet The Team</p>
+              <h2 class="section__title reveal-up">
+                Coaches who <span class="stroke">push limits</span>
+              </h2>
+            </div>
+            <p class="section__lead reveal-up">
+              World-class experience, relentless dedication to your progress.
+              <span class="trainers__hint">Scroll to explore <i>→</i></span>
+            </p>
+          </div>
+        </div>
+
+        <div class="trainers__viewport">
+          <div class="trainers__track" id="trainersTrack">
+            <article
+              class="tcard"
+              data-name="Akaki Marshania"
+              data-role="Personal Training"
+            >
+              <span class="tcard__num">01</span>
+              <span class="tcard__shine" aria-hidden="true"></span>
+              <img
+                src="assets/Akaki Marshania.jpg"
+                alt="Akaki Marshania — Personal Training"
+                loading="lazy"
+              />
+            </article>
+            <article
+              class="tcard"
+              data-name="David Tkemaladze"
+              data-role="Personal Training"
+            >
+              <span class="tcard__num">02</span>
+              <span class="tcard__shine" aria-hidden="true"></span>
+              <img
+                src="assets/David Tkemaladze.jpg"
+                alt="David Tkemaladze — Personal Training"
+                loading="lazy"
+              />
+            </article>
+            <article
+              class="tcard"
+              data-name="Giorgi Sitchinava"
+              data-role="Personal Training"
+            >
+              <span class="tcard__num">03</span>
+              <span class="tcard__shine" aria-hidden="true"></span>
+              <img
+                src="assets/Giorgi Sitchinava.jpg"
+                alt="Giorgi Sitchinava — Personal Training"
+                loading="lazy"
+              />
+            </article>
+            <article
+              class="tcard"
+              data-name="Kristine Bokuchava"
+              data-role="Pilates Instructor"
+            >
+              <span class="tcard__num">04</span>
+              <span class="tcard__shine" aria-hidden="true"></span>
+              <img
+                src="assets/Kristine Bokuchava.jpg"
+                alt="Kristine Bokuchava — Pilates Instructor"
+                loading="lazy"
+              />
+            </article>
+            <article
+              class="tcard"
+              data-name="Salome Gogolashvili"
+              data-role="Yoga Specialist"
+            >
+              <span class="tcard__num">05</span>
+              <span class="tcard__shine" aria-hidden="true"></span>
+              <img
+                src="assets/Salome Gogolashvili.jpg"
+                alt="Salome Gogolashvili — Yoga Specialist"
+                loading="lazy"
+              />
+            </article>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="trainers__progress" aria-hidden="true">
+            <span id="trainersProgress"></span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== TRANSFORMATION RESULTS ===== -->
+      <section class="section" id="results">
+        <div class="container">
+          <div class="section__head">
+            <p class="kicker reveal-up">Real Results</p>
+            <h2 class="section__title reveal-up">
+              Transformations that <span class="stroke">prove it</span>
+            </h2>
+            <p class="section__lead reveal-up">
+              Ordinary people. Extraordinary commitment. Real, measurable
+              change.
+            </p>
+          </div>
+
+          <div class="results-grid">
+            <article class="result reveal-up">
+              <div class="result__media">
+                <figure>
+                  <img
+                    src="https://images.unsplash.com/photo-1532384748853-8f54a8f476e2?auto=format&fit=crop&w=400&q=70"
+                    alt="Before"
+                    loading="lazy"
+                  />
+                  <figcaption>BEFORE</figcaption>
+                </figure>
+                <figure>
+                  <img
+                    src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=400&q=70"
+                    alt="After"
+                    loading="lazy"
+                  />
+                  <figcaption class="after">AFTER</figcaption>
+                </figure>
+              </div>
+              <div class="result__body">
+                <span class="result__tag">−24 KG FAT LOSS</span>
+                <h3>James M.</h3>
+                <p>
+                  "Six months at FIT FACTORY rebuilt my body and my confidence.
+                  I've never felt stronger."
+                </p>
+              </div>
+            </article>
+
+            <article class="result reveal-up">
+              <div class="result__media">
+                <figure>
+                  <img
+                    src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=400&q=70"
+                    alt="Before"
+                    loading="lazy"
+                  />
+                  <figcaption>BEFORE</figcaption>
+                </figure>
+                <figure>
+                  <img
+                    src="https://images.unsplash.com/photo-1550345332-09e3ac987658?auto=format&fit=crop&w=400&q=70"
+                    alt="After"
+                    loading="lazy"
+                  />
+                  <figcaption class="after">AFTER</figcaption>
+                </figure>
+              </div>
+              <div class="result__body">
+                <span class="result__tag">+12 KG MUSCLE GAIN</span>
+                <h3>Elena R.</h3>
+                <p>
+                  "The personalized program changed everything. Real coaching,
+                  real accountability, real gains."
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== GALLERY ===== -->
+      <section class="section section--alt" id="gallery">
+        <div class="container">
+          <div class="section__head">
+            <p class="kicker reveal-up">Inside The Factory</p>
+            <h2 class="section__title reveal-up">
+              Step into the <span class="stroke">arena</span>
+            </h2>
+          </div>
+
+          <div class="gallery">
+            <figure class="gallery__item gallery__item--tall reveal-up">
+              <img
+                src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=700&q=70"
+                alt="Gym interior"
+                loading="lazy"
+              />
+            </figure>
+            <figure class="gallery__item reveal-up">
+              <img
+                src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=700&q=70"
+                alt="Training session"
+                loading="lazy"
+              />
+            </figure>
+            <figure class="gallery__item reveal-up">
+              <img
+                src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&w=700&q=70"
+                alt="Equipment"
+                loading="lazy"
+              />
+            </figure>
+            <figure class="gallery__item gallery__item--wide reveal-up">
+              <img
+                src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=900&q=70"
+                alt="Community event"
+                loading="lazy"
+              />
+            </figure>
+            <figure class="gallery__item reveal-up">
+              <img
+                src="https://images.unsplash.com/photo-1574680096145-d05b474e2155?auto=format&fit=crop&w=700&q=70"
+                alt="Weight training"
+                loading="lazy"
+              />
+            </figure>
+            <figure class="gallery__item gallery__item--tall reveal-up">
+              <img
+                src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?auto=format&fit=crop&w=700&q=70"
+                alt="Functional training"
+                loading="lazy"
+              />
+            </figure>
+            <figure class="gallery__item reveal-up">
+              <img
+                src="https://images.unsplash.com/photo-1593079831268-3381b0db4a77?auto=format&fit=crop&w=700&q=70"
+                alt="Group class"
+                loading="lazy"
+              />
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== TESTIMONIALS ===== -->
+      <section class="section" id="testimonials">
+        <div class="container">
+          <div class="section__head">
+            <p class="kicker reveal-up">Member Voices</p>
+            <h2 class="section__title reveal-up">
+              Loved by our <span class="stroke">community</span>
+            </h2>
+          </div>
+
+          <div class="carousel reveal-up" id="carousel">
+            <div class="carousel__track" id="carouselTrack">
+              <article class="testimonial">
+                <div class="testimonial__stars" aria-label="5 stars">
+                  <svg viewBox="0 0 24 24"><use href="#i-star" /></svg
+                  ><svg viewBox="0 0 24 24"><use href="#i-star" /></svg
+                  ><svg viewBox="0 0 24 24"><use href="#i-star" /></svg
+                  ><svg viewBox="0 0 24 24"><use href="#i-star" /></svg
+                  ><svg viewBox="0 0 24 24"><use href="#i-star" /></svg>
+                </div>
+                <p>
+                  "FIT FACTORY isn't just a gym — it's a mindset. The trainers
+                  genuinely care and the energy is unmatched."
+                </p>
+                <div class="testimonial__person">
+                  <img
+                    src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=120&q=70"
+                    alt=""
+                    loading="lazy"
+                  />
+                  <div>
+                    <strong>Nika Baratelis</strong><span>Member · 2 years</span>
+                  </div>
+                </div>
+              </article>
+              <article class="testimonial">
+                <div class="testimonial__stars" aria-label="5 stars">
+                  <svg viewBox="0 0 24 24"><use href="#i-star" /></svg
+                  ><svg viewBox="0 0 24 24"><use href="#i-star" /></svg
+                  ><svg viewBox="0 0 24 24"><use href="#i-star" /></svg
+                  ><svg viewBox="0 0 24 24"><use href="#i-star" /></svg
+                  ><svg viewBox="0 0 24 24"><use href="#i-star" /></svg>
+                </div>
+                <p>
+                  "I lost 18kg in five months. The structure, the support, the
+                  community — it all just works. Life-changing."
+                </p>
+                <div class="testimonial__person">
+                  <img
+                    src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=120&q=70"
+                    alt=""
+                    loading="lazy"
+                  />
+                  <div>
+                    <strong>Anna Giorgadze</strong><span>Member · 1 year</span>
+                  </div>
+                </div>
+              </article>
+              <article class="testimonial">
+                <div class="testimonial__stars" aria-label="5 stars">
+                  <svg viewBox="0 0 24 24"><use href="#i-star" /></svg
+                  ><svg viewBox="0 0 24 24"><use href="#i-star" /></svg
+                  ><svg viewBox="0 0 24 24"><use href="#i-star" /></svg
+                  ><svg viewBox="0 0 24 24"><use href="#i-star" /></svg
+                  ><svg viewBox="0 0 24 24"><use href="#i-star" /></svg>
+                </div>
+                <p>
+                  "Best equipment in the city and coaches who actually know
+                  their craft. I look forward to every session."
+                </p>
+                <div class="testimonial__person">
+                  <img
+                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=70"
+                    alt=""
+                    loading="lazy"
+                  />
+                  <div>
+                    <strong>David Chantladze</strong
+                    ><span>Member · 3 years</span>
+                  </div>
+                </div>
+              </article>
+              <article class="testimonial">
+                <div class="testimonial__stars" aria-label="5 stars">
+                  <svg viewBox="0 0 24 24"><use href="#i-star" /></svg
+                  ><svg viewBox="0 0 24 24"><use href="#i-star" /></svg
+                  ><svg viewBox="0 0 24 24"><use href="#i-star" /></svg
+                  ><svg viewBox="0 0 24 24"><use href="#i-star" /></svg
+                  ><svg viewBox="0 0 24 24"><use href="#i-star" /></svg>
+                </div>
+                <p>
+                  "From day one I felt welcomed. Now I'm the strongest I've ever
+                  been. FIT FACTORY delivers on every promise."
+                </p>
+                <div class="testimonial__person">
+                  <img
+                    src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=120&q=70"
+                    alt=""
+                    loading="lazy"
+                  />
+                  <div>
+                    <strong>Ana Lobzhanidze</strong
+                    ><span>Member · 18 months</span>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div class="carousel__controls">
+              <button class="carousel__btn" id="prevBtn" aria-label="Previous">
+                ←
+              </button>
+              <div class="carousel__dots" id="carouselDots"></div>
+              <button class="carousel__btn" id="nextBtn" aria-label="Next">
+                →
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== FAQ ===== -->
+      <section class="section section--alt" id="faq">
+        <div class="container container--narrow">
+          <div class="section__head">
+            <p class="kicker reveal-up">Questions</p>
+            <h2 class="section__title reveal-up">
+              Frequently asked <span class="stroke">questions</span>
+            </h2>
+          </div>
+
+          <div class="faq">
+            <div class="faq__item reveal-up">
+              <button class="faq__q" aria-expanded="false">
+                How much does a membership cost?<span class="faq__icon"></span>
+              </button>
+              <div class="faq__a">
+                <p>
+                  Memberships start at $29/month for Basic and go up to
+                  $99/month for Premium. There are no long-term contracts — you
+                  can cancel anytime. Check our Plans section for a full
+                  comparison.
+                </p>
+              </div>
+            </div>
+            <div class="faq__item reveal-up">
+              <button class="faq__q" aria-expanded="false">
+                Do you offer free trial sessions?<span class="faq__icon"></span>
+              </button>
+              <div class="faq__a">
+                <p>
+                  Yes! We offer a complimentary 3-day trial pass for new
+                  visitors, including one free group class. Just fill out the
+                  contact form and our team will set you up.
+                </p>
+              </div>
+            </div>
+            <div class="faq__item reveal-up">
+              <button class="faq__q" aria-expanded="false">
+                What are your opening hours?<span class="faq__icon"></span>
+              </button>
+              <div class="faq__a">
+                <p>
+                  We're open every day from 06:00 to 23:00. Premium members
+                  enjoy 24/7 priority access with their membership card.
+                </p>
+              </div>
+            </div>
+            <div class="faq__item reveal-up">
+              <button class="faq__q" aria-expanded="false">
+                Is parking available?<span class="faq__icon"></span>
+              </button>
+              <div class="faq__a">
+                <p>
+                  Absolutely. We provide free, secure on-site parking for all
+                  members, plus dedicated bicycle racks at the main entrance.
+                </p>
+              </div>
+            </div>
+            <div class="faq__item reveal-up">
+              <button class="faq__q" aria-expanded="false">
+                Can I book personal training?<span class="faq__icon"></span>
+              </button>
+              <div class="faq__a">
+                <p>
+                  Of course. Personal training is included with Standard (2
+                  sessions/month) and unlimited with Premium. You can also
+                  purchase individual sessions with any of our certified
+                  coaches.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== CONTACT ===== -->
+      <section class="section" id="contact">
+        <div class="container">
+          <div class="contact">
+            <div class="contact__info reveal-up">
+              <p class="kicker">Get In Touch</p>
+              <h2 class="section__title">
+                Start your <span class="stroke">transformation</span>
+              </h2>
+              <p class="section__lead">
+                Book your free trial today. Our team will reach out within 24
+                hours.
+              </p>
+
+              <ul class="contact__list">
+                <li>
+                  <span class="contact__ic"
+                    ><svg viewBox="0 0 24 24"><use href="#i-phone" /></svg
+                  ></span>
+                  <div>
+                    <strong>Phone</strong
+                    ><a href="tel:+995322054240">0 32 2 054 240</a>
+                  </div>
+                </li>
+                <li>
+                  <span class="contact__ic"
+                    ><svg viewBox="0 0 24 24"><use href="#i-mail" /></svg
+                  ></span>
+                  <div>
+                    <strong>Email</strong
+                    ><a href="mailto:hello@fitfactory.com"
+                      >hello@fitfactory.com</a
+                    >
+                  </div>
+                </li>
+                <li>
+                  <span class="contact__ic"
+                    ><svg viewBox="0 0 24 24"><use href="#i-pin" /></svg
+                  ></span>
+                  <div>
+                    <strong>Address</strong
+                    ><span>თბილისი, ბ. კვერნაძის N7 / პ. ასლანიდის N12</span>
+                  </div>
+                </li>
+              </ul>
+
+              <div class="contact__map">
+                <iframe
+                  title="FIT FACTORY location"
+                  src="https://www.google.com/maps?q=ბიძინა+კვერნაძის+7,+თბილისი&output=embed"
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
+            </div>
+
+            <form class="contact__form reveal-up" id="contactForm" novalidate>
+              <div class="field">
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  placeholder=" "
+                />
+                <label for="name">Full Name</label>
+              </div>
+              <div class="field">
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  placeholder=" "
+                />
+                <label for="email">Email Address</label>
+              </div>
+              <div class="field">
+                <input type="tel" id="phone" name="phone" placeholder=" " />
+                <label for="phone">Phone Number</label>
+              </div>
+              <div class="field">
+                <select id="goal" name="goal" required>
+                  <option value="" disabled selected>Choose your goal</option>
+                  <option>Weight Loss</option>
+                  <option>Muscle Gain</option>
+                  <option>Strength Training</option>
+                  <option>General Fitness</option>
+                </select>
+              </div>
+              <div class="field">
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="4"
+                  placeholder=" "
+                ></textarea>
+                <label for="message">Message (optional)</label>
+              </div>
+              <button type="submit" class="btn btn--solid btn--block">
+                Claim Free Trial
+              </button>
+              <p class="contact__note" id="formNote" hidden>
+                ✓ Thanks! Your request has been received. We'll be in touch
+                soon.
+              </p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+      <div class="container footer__inner">
+        <div class="footer__brand">
+          <a href="#hero" class="brand">
+            <img
+              src="fitFactory logo.jpg"
+              alt=""
+              class="brand__logo"
+              aria-hidden="true"
+            />
+            <span class="brand__name">FIT<span>FACTORY</span></span>
+          </a>
+          <p>
+            Where transformation happens. Train smarter. Move faster. Become
+            stronger.
+          </p>
+          <div class="socials">
+            <a
+              href="https://www.instagram.com/fitfactory_official_georgia/?hl=en"
+              target="_blank"
+              aria-label="Instagram"
+              ><svg viewBox="0 0 24 24" width="18" height="18">
+                <rect
+                  x="3"
+                  y="3"
+                  width="18"
+                  height="18"
+                  rx="5"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                />
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="4"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                />
+                <circle cx="17" cy="7" r="1.2" fill="currentColor" /></svg
+            ></a>
+            <a
+              href="https://www.facebook.com/profile.php?id=100085191204410&ref=NONE_xav_ig_profile_page_web#"
+              target="_blank"
+              aria-label="Facebook"
+              ><svg viewBox="0 0 24 24" width="18" height="18">
+                <path
+                  d="M14 9h3V6h-3c-2 0-3 1-3 3v2H9v3h2v6h3v-6h2.5l.5-3H14V9z"
+                  fill="currentColor"
+                /></svg
+            ></a>
+            <a
+              href="https://www.instagram.com/fitfactory_official_georgia/?hl=en"
+              target="_blank"
+              aria-label="YouTube"
+              ><svg viewBox="0 0 24 24" width="18" height="18">
+                <rect
+                  x="3"
+                  y="6"
+                  width="18"
+                  height="12"
+                  rx="3"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                />
+                <path d="M11 9.5l4 2.5-4 2.5z" fill="currentColor" /></svg
+            ></a>
+            <a
+              href="https://www.facebook.com/profile.php?id=100085191204410&ref=NONE_xav_ig_profile_page_web#"
+              target="_blank"
+              aria-label="TikTok"
+              ><svg viewBox="0 0 24 24" width="18" height="18">
+                <path
+                  d="M14 4v9.5a3 3 0 11-3-3M14 7a4.5 4.5 0 004 3"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                /></svg
+            ></a>
+          </div>
+        </div>
+
+        <nav class="footer__nav" aria-label="Footer">
+          <h4>Explore</h4>
+          <a href="#why">Why Us</a>
+          <a href="#services">Services</a>
+          <a href="#plans">Plans</a>
+          <a href="#trainers">Trainers</a>
+        </nav>
+        <nav class="footer__nav" aria-label="Footer secondary">
+          <h4>Company</h4>
+          <a href="#results">Results</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <div class="footer__nav">
+          <h4>Hours</h4>
+          <p>Mon – Sun</p>
+          <p>06:00 — 23:00</p>
+          <p>Premium · 24/7</p>
+        </div>
+      </div>
+      <div class="footer__bottom container">
+        <p>© <span id="year">2026</span> FIT FACTORY. All rights reserved.</p>
+        <p>Built for those who refuse to settle.</p>
+      </div>
+    </footer>
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
