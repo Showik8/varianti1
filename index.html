@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>
-      FIT FACTORY — Build Your Strongest Version | Gym, Fitness Center &
-      Personal Training
+      FIT FACTORY — ააგე შენი უძლიერესი ვერსია | სპორტული კლუბი და პერსონალური
+      ვარჯიში
     </title>
     <meta
       name="description"
-      content="FIT FACTORY is a premium fitness club offering strength training, personal training, weight loss programs and functional training. Train smarter. Move faster. Become stronger."
+      content="FIT FACTORY — პრემიუმ ფიტნეს კლუბი: ძალისმიერი ვარჯიში, პერსონალური ტრენინგი, წონის კლების და ფუნქციური პროგრამები. ივარჯიშე ჭკვიანურად. იმოძრავე სწრაფად. გახდი ძლიერი."
     />
     <meta
       name="keywords"
@@ -29,16 +29,26 @@
     />
     <meta property="og:type" content="website" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       rel="shortcut icon"
       href="./fitFactory logo.ico"
       type="image/x-icon"
     />
+
+    <!-- Local fonts (preload the two most-used weights) -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
+      rel="preload"
+      as="font"
+      type="font/ttf"
+      href="assets/fonts/regular.ttf"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      as="font"
+      type="font/otf"
+      href="assets/fonts/title.otf"
+      crossorigin
     />
 
     <link rel="stylesheet" href="styles.css" />
@@ -306,143 +316,240 @@
       </a>
 
       <nav class="nav" id="nav" aria-label="Main">
-        <a href="#why">Why Us</a>
-        <a href="#services">Services</a>
-        <a href="#plans">Plans</a>
-        <a href="#schedule">Schedule</a>
-        <a href="#trainers">Trainers</a>
-        <a href="#results">Results</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#faq">FAQ</a>
-        <a href="#contact">Contact</a>
+        <div class="nav__group">
+          <a
+            href="#why"
+            class="nav__trigger"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            <span data-i18n="nav.about">About Us</span>
+            <svg
+              class="nav__caret"
+              viewBox="0 0 24 24"
+              width="11"
+              height="11"
+              aria-hidden="true"
+            >
+              <path
+                d="M6 9l6 6 6-6"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </a>
+          <div class="nav__dropdown">
+            <a href="#why" data-i18n="nav.why">Why Us</a>
+            <a href="#plans" data-i18n="nav.plans">Plans</a>
+            <a href="#trainers" data-i18n="nav.trainers">Trainers</a>
+            <a href="#results" data-i18n="nav.results">Results</a>
+            <a href="#gallery" data-i18n="nav.gallery">Gallery</a>
+          </div>
+        </div>
+        <a href="#services" data-i18n="nav.services">Services</a>
+        <a href="#schedule" data-i18n="nav.schedule">Schedule</a>
+        <a href="#faq" data-i18n="nav.faq">FAQ</a>
+        <a href="#contact" data-i18n="nav.contact">Contact</a>
       </nav>
 
-      <a href="#contact" class="btn btn--solid header__cta">Join Now</a>
+      <div class="header__actions">
+        <div
+          class="lang"
+          role="group"
+          data-i18n-attr="aria-label:a11y.lang"
+          aria-label="Switch language"
+        >
+          <button type="button" class="lang__opt" data-set-lang="ka">ქარ</button>
+          <button type="button" class="lang__opt" data-set-lang="en">EN</button>
+        </div>
 
-      <button
-        class="burger"
-        id="burger"
-        aria-label="Open menu"
-        aria-expanded="false"
-      >
-        <span></span><span></span><span></span>
-      </button>
+        <button
+          type="button"
+          class="btn btn--solid header__cta"
+          data-open-join
+          data-i18n="cta.join"
+        >
+          Join Now
+        </button>
+
+        <button
+          class="burger"
+          id="burger"
+          data-i18n-attr="aria-label:a11y.menu"
+          aria-label="Open menu"
+          aria-expanded="false"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </header>
 
     <main>
-      <!-- ===== HERO ===== -->
+      <!-- ===== HERO (fixed curtain backdrop) ===== -->
       <section class="hero" id="hero">
-        <div class="hero__bg" data-speed="0.2"></div>
+        <div class="hero__media">
+          <video
+            class="hero__video"
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="auto"
+            aria-hidden="true"
+          >
+            <source src="assets/gym_hero.mp4" type="video/mp4" />
+          </video>
+        </div>
         <div class="hero__overlay"></div>
-        <div class="hero__grid"></div>
 
         <div class="hero__inner">
-          <p class="hero__eyebrow reveal-up">
+          <p class="hero__eyebrow reveal-up" data-i18n="hero.eyebrow">
             PREMIUM FITNESS CLUB · EST. 2014
           </p>
           <h1 class="hero__title">
-            <span class="line"><span>BUILD YOUR</span></span>
-            <span class="line"><span class="stroke">STRONGEST</span></span>
-            <span class="line"><span>VERSION</span></span>
+            <span class="line"
+              ><span data-i18n="hero.title.l1">BUILD YOUR</span></span
+            >
+            <span class="line"
+              ><span class="stroke" data-i18n="hero.title.l2"
+                >STRONGEST</span
+              ></span
+            >
+            <span class="line"
+              ><span data-i18n="hero.title.l3">VERSION</span></span
+            >
           </h1>
-          <p class="hero__sub reveal-up">
+          <p class="hero__sub reveal-up" data-i18n-html="hero.sub">
             Train smarter. Move faster. Become stronger with
             <strong>FIT FACTORY</strong>.
           </p>
           <div class="hero__cta reveal-up">
-            <a href="#plans" class="btn btn--solid">Join Now</a>
-            <a href="#contact" class="btn btn--ghost">Free Trial</a>
+            <button
+              type="button"
+              class="btn btn--solid"
+              data-open-join
+              data-i18n="hero.cta.join"
+            >
+              Join Now
+            </button>
+            <a href="#contact" class="btn btn--ghost" data-i18n="hero.cta.trial"
+              >Free Trial</a
+            >
           </div>
 
           <div class="hero__stats reveal-up">
             <div>
-              <strong data-count="4200">0</strong><span>Active Members</span>
+              <strong data-count="4200">0</strong
+              ><span data-i18n="hero.stat.members">Active Members</span>
             </div>
             <div>
-              <strong data-count="28">0</strong><span>Expert Trainers</span>
+              <strong data-count="28">0</strong
+              ><span data-i18n="hero.stat.trainers">Expert Trainers</span>
             </div>
             <div>
-              <strong data-count="120">0</strong><span>Weekly Classes</span>
+              <strong data-count="120">0</strong
+              ><span data-i18n="hero.stat.classes">Weekly Classes</span>
             </div>
             <div>
-              <strong data-count="11">0</strong><span>Years of Power</span>
+              <strong data-count="11">0</strong
+              ><span data-i18n="hero.stat.years">Years of Power</span>
             </div>
           </div>
         </div>
 
-        <a href="#why" class="hero__scroll" aria-label="Scroll down">
-          <span>SCROLL</span><i></i>
+        <a
+          href="#why"
+          class="hero__scroll"
+          data-i18n-attr="aria-label:hero.scroll"
+          aria-label="Scroll down"
+        >
+          <span data-i18n="hero.scroll">SCROLL</span><i></i>
         </a>
       </section>
+      <div class="hero-spacer" aria-hidden="true"></div>
 
-      <!-- Marquee -->
-      <div class="marquee" aria-hidden="true">
-        <div class="marquee__track">
-          <span>STRENGTH ·</span><span>SPEED ·</span
-          ><span>TRANSFORMATION ·</span><span>DISCIPLINE ·</span
-          ><span>PERFORMANCE ·</span><span>GROWTH ·</span>
-          <span>STRENGTH ·</span><span>SPEED ·</span
-          ><span>TRANSFORMATION ·</span><span>DISCIPLINE ·</span
-          ><span>PERFORMANCE ·</span><span>GROWTH ·</span>
+      <!-- ===== CURTAIN: marquee + why rise over the hero ===== -->
+      <div class="curtain">
+        <!-- Marquee -->
+        <div class="marquee" aria-hidden="true">
+          <div class="marquee__track">
+            <span data-i18n="mq.1">STRENGTH</span><span data-i18n="mq.2">SPEED</span
+            ><span data-i18n="mq.3">TRANSFORMATION</span><span data-i18n="mq.4"
+              >DISCIPLINE</span
+            ><span data-i18n="mq.5">PERFORMANCE</span><span data-i18n="mq.6"
+              >GROWTH</span
+            ><span data-i18n="mq.1">STRENGTH</span><span data-i18n="mq.2">SPEED</span
+            ><span data-i18n="mq.3">TRANSFORMATION</span><span data-i18n="mq.4"
+              >DISCIPLINE</span
+            ><span data-i18n="mq.5">PERFORMANCE</span><span data-i18n="mq.6"
+              >GROWTH</span
+            >
+          </div>
         </div>
       </div>
+      <!-- /curtain -->
 
       <!-- ===== WHY FIT FACTORY ===== -->
       <section class="section" id="why">
         <div class="container">
-          <div class="section__head">
-            <p class="kicker reveal-up">Why FIT FACTORY</p>
-            <h2 class="section__title reveal-up">
-              Where transformation <span class="stroke">happens</span>
-            </h2>
-            <p class="section__lead reveal-up">
-              Everything you need to perform at your peak — under one roof,
-              engineered for results.
-            </p>
-          </div>
+            <div class="section__head">
+              <p class="kicker reveal-up" data-i18n="why.kicker">
+                Why FIT FACTORY
+              </p>
+              <h2 class="section__title reveal-up" data-i18n-html="why.title">
+                Where transformation <span class="stroke">happens</span>
+              </h2>
+              <p class="section__lead reveal-up" data-i18n="why.lead">
+                Everything you need to perform at your peak — under one roof,
+                engineered for results.
+              </p>
+            </div>
 
-          <div class="why-grid">
-            <article class="feature reveal-up">
-              <span class="feature__icon"
-                ><svg viewBox="0 0 24 24"><use href="#i-trainer" /></svg
-              ></span>
-              <h3>Professional Trainers</h3>
-              <p>
-                Certified coaches who build programs around your body, your
-                goals and your pace.
-              </p>
-            </article>
-            <article class="feature reveal-up">
-              <span class="feature__icon"
-                ><svg viewBox="0 0 24 24"><use href="#i-dumbbell" /></svg
-              ></span>
-              <h3>Modern Equipment</h3>
-              <p>
-                Technogym-grade machines and free weights, maintained to
-                performance standards.
-              </p>
-            </article>
-            <article class="feature reveal-up">
-              <span class="feature__icon"
-                ><svg viewBox="0 0 24 24"><use href="#i-target" /></svg
-              ></span>
-              <h3>Personalized Programs</h3>
-              <p>
-                Data-driven plans that adapt as you grow stronger, week after
-                week.
-              </p>
-            </article>
-            <article class="feature reveal-up">
-              <span class="feature__icon"
-                ><svg viewBox="0 0 24 24"><use href="#i-community" /></svg
-              ></span>
-              <h3>Community Support</h3>
-              <p>
-                Train alongside a motivated crew that pushes you past every
-                limit.
-              </p>
-            </article>
-          </div>
+            <div class="why-grid">
+              <article class="feature reveal-up">
+                <span class="feature__icon"
+                  ><svg viewBox="0 0 24 24"><use href="#i-trainer" /></svg
+                ></span>
+                <h3 data-i18n="why.f1.t">Professional Trainers</h3>
+                <p data-i18n="why.f1.d">
+                  Certified coaches who build programs around your body, your
+                  goals and your pace.
+                </p>
+              </article>
+              <article class="feature reveal-up">
+                <span class="feature__icon"
+                  ><svg viewBox="0 0 24 24"><use href="#i-dumbbell" /></svg
+                ></span>
+                <h3 data-i18n="why.f2.t">Modern Equipment</h3>
+                <p data-i18n="why.f2.d">
+                  Technogym-grade machines and free weights, maintained to
+                  performance standards.
+                </p>
+              </article>
+              <article class="feature reveal-up">
+                <span class="feature__icon"
+                  ><svg viewBox="0 0 24 24"><use href="#i-target" /></svg
+                ></span>
+                <h3 data-i18n="why.f3.t">Personalized Programs</h3>
+                <p data-i18n="why.f3.d">
+                  Data-driven plans that adapt as you grow stronger, week after
+                  week.
+                </p>
+              </article>
+              <article class="feature reveal-up">
+                <span class="feature__icon"
+                  ><svg viewBox="0 0 24 24"><use href="#i-community" /></svg
+                ></span>
+                <h3 data-i18n="why.f4.t">Community Support</h3>
+                <p data-i18n="why.f4.d">
+                  Train alongside a motivated crew that pushes you past every
+                  limit.
+                </p>
+              </article>
+            </div>
         </div>
       </section>
 
@@ -450,11 +557,11 @@
       <section class="section section--alt" id="services">
         <div class="container">
           <div class="section__head">
-            <p class="kicker reveal-up">Our Services</p>
-            <h2 class="section__title reveal-up">
+            <p class="kicker reveal-up" data-i18n="srv.kicker">Our Services</p>
+            <h2 class="section__title reveal-up" data-i18n-html="srv.title">
               Train your way to <span class="stroke">greatness</span>
             </h2>
-            <p class="section__lead reveal-up">
+            <p class="section__lead reveal-up" data-i18n="srv.lead">
               Six disciplines, one mission — your strongest version.
             </p>
           </div>
@@ -464,67 +571,67 @@
               <span class="service__icon"
                 ><svg viewBox="0 0 24 24"><use href="#i-strength" /></svg
               ></span>
-              <h3>Strength Training</h3>
-              <p>
+              <h3 data-i18n="srv.s1.t">Strength Training</h3>
+              <p data-i18n="srv.s1.d">
                 Build raw power and lean muscle with progressive overload
                 programming.
               </p>
-              <span class="service__arrow">→</span>
+              <span class="service__arrow" aria-hidden="true">→</span>
             </article>
             <article class="service reveal-up">
               <span class="service__icon"
                 ><svg viewBox="0 0 24 24"><use href="#i-trainer" /></svg
               ></span>
-              <h3>Personal Training</h3>
-              <p>
+              <h3 data-i18n="srv.s2.t">Personal Training</h3>
+              <p data-i18n="srv.s2.d">
                 One-on-one coaching tailored entirely to your goals and
                 schedule.
               </p>
-              <span class="service__arrow">→</span>
+              <span class="service__arrow" aria-hidden="true">→</span>
             </article>
             <article class="service reveal-up">
               <span class="service__icon"
                 ><svg viewBox="0 0 24 24"><use href="#i-flame" /></svg
               ></span>
-              <h3>Weight Loss Programs</h3>
-              <p>
+              <h3 data-i18n="srv.s3.t">Weight Loss Programs</h3>
+              <p data-i18n="srv.s3.d">
                 Burn fat fast with structured training and metabolic
                 conditioning.
               </p>
-              <span class="service__arrow">→</span>
+              <span class="service__arrow" aria-hidden="true">→</span>
             </article>
             <article class="service reveal-up">
               <span class="service__icon"
                 ><svg viewBox="0 0 24 24"><use href="#i-pulse" /></svg
               ></span>
-              <h3>Functional Training</h3>
-              <p>
+              <h3 data-i18n="srv.s4.t">Functional Training</h3>
+              <p data-i18n="srv.s4.d">
                 Move better in life and sport with mobility, balance and core
                 power.
               </p>
-              <span class="service__arrow">→</span>
+              <span class="service__arrow" aria-hidden="true">→</span>
             </article>
             <article class="service reveal-up">
               <span class="service__icon"
                 ><svg viewBox="0 0 24 24"><use href="#i-group" /></svg
               ></span>
-              <h3>Group Classes</h3>
-              <p>
+              <h3 data-i18n="srv.s5.t">Group Classes</h3>
+              <p data-i18n="srv.s5.d">
                 High-energy sessions — HIIT, spin and bootcamp — fueled by the
                 crowd.
               </p>
-              <span class="service__arrow">→</span>
+              <span class="service__arrow" aria-hidden="true">→</span>
             </article>
             <article class="service reveal-up">
               <span class="service__icon"
                 ><svg viewBox="0 0 24 24"><use href="#i-leaf" /></svg
               ></span>
-              <h3>Nutrition Guidance</h3>
-              <p>
+              <h3 data-i18n="srv.s6.t">Nutrition Guidance</h3>
+              <p data-i18n="srv.s6.d">
                 Personalized meal plans that turn your training into real
                 results.
               </p>
-              <span class="service__arrow">→</span>
+              <span class="service__arrow" aria-hidden="true">→</span>
             </article>
           </div>
         </div>
@@ -534,11 +641,13 @@
       <section class="section" id="plans">
         <div class="container">
           <div class="section__head">
-            <p class="kicker reveal-up">Membership Plans</p>
-            <h2 class="section__title reveal-up">
+            <p class="kicker reveal-up" data-i18n="plans.kicker">
+              Membership Plans
+            </p>
+            <h2 class="section__title reveal-up" data-i18n-html="plans.title">
               Choose your <span class="stroke">commitment</span>
             </h2>
-            <p class="section__lead reveal-up">
+            <p class="section__lead reveal-up" data-i18n="plans.lead">
               No contracts. Cancel anytime. Every plan unlocks your strongest
               self.
             </p>
@@ -546,103 +655,137 @@
 
           <div class="plans-grid">
             <article class="plan reveal-up">
-              <h3 class="plan__name">BASIC</h3>
+              <h3 class="plan__name" data-i18n="plan.basic.name">BASIC</h3>
               <p class="plan__price">
-                <span class="cur">$</span>29<small>/mo</small>
+                <span class="cur">$</span>29<small data-i18n="plan.per"
+                  >/mo</small
+                >
               </p>
-              <p class="plan__desc">Everything you need to start strong.</p>
+              <p class="plan__desc" data-i18n="plan.basic.desc">
+                Everything you need to start strong.
+              </p>
               <ul class="plan__features">
                 <li>
-                  <svg viewBox="0 0 24 24"><use href="#i-check" /></svg>Full gym
-                  floor access
+                  <svg viewBox="0 0 24 24"><use href="#i-check" /></svg
+                  ><span data-i18n="plan.basic.f1">Full gym floor access</span>
                 </li>
                 <li>
-                  <svg viewBox="0 0 24 24"><use href="#i-check" /></svg>2 group
-                  classes / week
+                  <svg viewBox="0 0 24 24"><use href="#i-check" /></svg
+                  ><span data-i18n="plan.basic.f2">2 group classes / week</span>
                 </li>
                 <li>
-                  <svg viewBox="0 0 24 24"><use href="#i-check" /></svg>Locker &
-                  shower access
-                </li>
-                <li class="muted">
-                  <svg viewBox="0 0 24 24"><use href="#i-check" /></svg>Personal
-                  training
+                  <svg viewBox="0 0 24 24"><use href="#i-check" /></svg
+                  ><span data-i18n="plan.basic.f3">Locker & shower access</span>
                 </li>
                 <li class="muted">
                   <svg viewBox="0 0 24 24"><use href="#i-check" /></svg
-                  >Nutrition plan
+                  ><span data-i18n="plan.basic.f4">Personal training</span>
+                </li>
+                <li class="muted">
+                  <svg viewBox="0 0 24 24"><use href="#i-check" /></svg
+                  ><span data-i18n="plan.basic.f5">Nutrition plan</span>
                 </li>
               </ul>
-              <a href="#contact" class="btn btn--ghost plan__cta"
-                >Get Started</a
+              <button
+                type="button"
+                class="btn btn--ghost plan__cta"
+                data-open-join
+                data-plan="basic"
+                data-i18n="plan.cta"
               >
+                Get Started
+              </button>
             </article>
 
             <article class="plan plan--featured reveal-up">
-              <span class="plan__badge">MOST POPULAR</span>
-              <h3 class="plan__name">STANDARD</h3>
+              <span class="plan__badge" data-i18n="plan.std.badge"
+                >MOST POPULAR</span
+              >
+              <h3 class="plan__name" data-i18n="plan.std.name">STANDARD</h3>
               <p class="plan__price">
-                <span class="cur">$</span>59<small>/mo</small>
+                <span class="cur">$</span>59<small data-i18n="plan.per"
+                  >/mo</small
+                >
               </p>
-              <p class="plan__desc">The complete training experience.</p>
+              <p class="plan__desc" data-i18n="plan.std.desc">
+                The complete training experience.
+              </p>
               <ul class="plan__features">
                 <li>
                   <svg viewBox="0 0 24 24"><use href="#i-check" /></svg
-                  >Unlimited gym access
+                  ><span data-i18n="plan.std.f1">Unlimited gym access</span>
                 </li>
                 <li>
                   <svg viewBox="0 0 24 24"><use href="#i-check" /></svg
-                  >Unlimited group classes
+                  ><span data-i18n="plan.std.f2">Unlimited group classes</span>
                 </li>
                 <li>
-                  <svg viewBox="0 0 24 24"><use href="#i-check" /></svg>2 PT
-                  sessions / month
+                  <svg viewBox="0 0 24 24"><use href="#i-check" /></svg
+                  ><span data-i18n="plan.std.f3">2 PT sessions / month</span>
                 </li>
                 <li>
-                  <svg viewBox="0 0 24 24"><use href="#i-check" /></svg>Body
-                  composition tracking
+                  <svg viewBox="0 0 24 24"><use href="#i-check" /></svg
+                  ><span data-i18n="plan.std.f4">Body composition tracking</span>
                 </li>
                 <li class="muted">
-                  <svg viewBox="0 0 24 24"><use href="#i-check" /></svg>Custom
-                  nutrition plan
+                  <svg viewBox="0 0 24 24"><use href="#i-check" /></svg
+                  ><span data-i18n="plan.std.f5">Custom nutrition plan</span>
                 </li>
               </ul>
-              <a href="#contact" class="btn btn--solid plan__cta"
-                >Get Started</a
+              <button
+                type="button"
+                class="btn btn--solid plan__cta"
+                data-open-join
+                data-plan="std"
+                data-i18n="plan.cta"
               >
+                Get Started
+              </button>
             </article>
 
             <article class="plan reveal-up">
-              <h3 class="plan__name">PREMIUM</h3>
+              <h3 class="plan__name" data-i18n="plan.prem.name">PREMIUM</h3>
               <p class="plan__price">
-                <span class="cur">$</span>99<small>/mo</small>
+                <span class="cur">$</span>99<small data-i18n="plan.per"
+                  >/mo</small
+                >
               </p>
-              <p class="plan__desc">Elite, fully personalized coaching.</p>
+              <p class="plan__desc" data-i18n="plan.prem.desc">
+                Elite, fully personalized coaching.
+              </p>
               <ul class="plan__features">
                 <li>
                   <svg viewBox="0 0 24 24"><use href="#i-check" /></svg
-                  >Everything in Standard
+                  ><span data-i18n="plan.prem.f1">Everything in Standard</span>
                 </li>
                 <li>
                   <svg viewBox="0 0 24 24"><use href="#i-check" /></svg
-                  >Unlimited personal training
+                  ><span data-i18n="plan.prem.f2"
+                    >Unlimited personal training</span
+                  >
                 </li>
                 <li>
-                  <svg viewBox="0 0 24 24"><use href="#i-check" /></svg>Custom
-                  nutrition plan
+                  <svg viewBox="0 0 24 24"><use href="#i-check" /></svg
+                  ><span data-i18n="plan.prem.f3">Custom nutrition plan</span>
                 </li>
                 <li>
-                  <svg viewBox="0 0 24 24"><use href="#i-check" /></svg>Recovery
-                  & spa access
+                  <svg viewBox="0 0 24 24"><use href="#i-check" /></svg
+                  ><span data-i18n="plan.prem.f4">Recovery & spa access</span>
                 </li>
                 <li>
-                  <svg viewBox="0 0 24 24"><use href="#i-check" /></svg>Priority
-                  booking 24/7
+                  <svg viewBox="0 0 24 24"><use href="#i-check" /></svg
+                  ><span data-i18n="plan.prem.f5">Priority booking 24/7</span>
                 </li>
               </ul>
-              <a href="#contact" class="btn btn--ghost plan__cta"
-                >Get Started</a
+              <button
+                type="button"
+                class="btn btn--ghost plan__cta"
+                data-open-join
+                data-plan="prem"
+                data-i18n="plan.cta"
               >
+                Get Started
+              </button>
             </article>
           </div>
         </div>
@@ -652,11 +795,13 @@
       <section class="section section--alt" id="schedule">
         <div class="container">
           <div class="section__head">
-            <p class="kicker reveal-up">Weekly Timetable</p>
-            <h2 class="section__title reveal-up">
+            <p class="kicker reveal-up" data-i18n="sch.kicker">
+              Weekly Timetable
+            </p>
+            <h2 class="section__title reveal-up" data-i18n-html="sch.title">
               Find your <span class="stroke">class</span>
             </h2>
-            <p class="section__lead reveal-up">
+            <p class="section__lead reveal-up" data-i18n="sch.lead">
               Group sessions every day of the week. Pick your day, book your
               spot.
             </p>
@@ -674,7 +819,7 @@
               id="schedulePanel"
               aria-live="polite"
             ></div>
-            <p class="schedule__note">
+            <p class="schedule__note" data-i18n="sch.note">
               All classes are 60 minutes. Booking opens 24h in advance for
               members.
             </p>
@@ -687,25 +832,20 @@
         <div class="container">
           <div class="section__head section__head--row">
             <div>
-              <p class="kicker reveal-up">Meet The Team</p>
-              <h2 class="section__title reveal-up">
+              <p class="kicker reveal-up" data-i18n="tr.kicker">Meet The Team</p>
+              <h2 class="section__title reveal-up" data-i18n-html="tr.title">
                 Coaches who <span class="stroke">push limits</span>
               </h2>
             </div>
-            <p class="section__lead reveal-up">
+            <p class="section__lead reveal-up" data-i18n="tr.lead">
               World-class experience, relentless dedication to your progress.
-              <span class="trainers__hint">Scroll to explore <i>→</i></span>
             </p>
           </div>
         </div>
 
         <div class="trainers__viewport">
           <div class="trainers__track" id="trainersTrack">
-            <article
-              class="tcard"
-              data-name="Akaki Marshania"
-              data-role="Personal Training"
-            >
+            <article class="tcard">
               <span class="tcard__num">01</span>
               <span class="tcard__shine" aria-hidden="true"></span>
               <img
@@ -714,11 +854,7 @@
                 loading="lazy"
               />
             </article>
-            <article
-              class="tcard"
-              data-name="David Tkemaladze"
-              data-role="Personal Training"
-            >
+            <article class="tcard">
               <span class="tcard__num">02</span>
               <span class="tcard__shine" aria-hidden="true"></span>
               <img
@@ -727,11 +863,7 @@
                 loading="lazy"
               />
             </article>
-            <article
-              class="tcard"
-              data-name="Giorgi Sitchinava"
-              data-role="Personal Training"
-            >
+            <article class="tcard">
               <span class="tcard__num">03</span>
               <span class="tcard__shine" aria-hidden="true"></span>
               <img
@@ -740,11 +872,7 @@
                 loading="lazy"
               />
             </article>
-            <article
-              class="tcard"
-              data-name="Kristine Bokuchava"
-              data-role="Pilates Instructor"
-            >
+            <article class="tcard">
               <span class="tcard__num">04</span>
               <span class="tcard__shine" aria-hidden="true"></span>
               <img
@@ -753,11 +881,7 @@
                 loading="lazy"
               />
             </article>
-            <article
-              class="tcard"
-              data-name="Salome Gogolashvili"
-              data-role="Yoga Specialist"
-            >
+            <article class="tcard">
               <span class="tcard__num">05</span>
               <span class="tcard__shine" aria-hidden="true"></span>
               <img
@@ -770,6 +894,9 @@
         </div>
 
         <div class="container">
+          <div class="trainers__hint reveal-up">
+            <span data-i18n="tr.hint">Scroll to explore</span><i>→</i>
+          </div>
           <div class="trainers__progress" aria-hidden="true">
             <span id="trainersProgress"></span>
           </div>
@@ -780,11 +907,11 @@
       <section class="section" id="results">
         <div class="container">
           <div class="section__head">
-            <p class="kicker reveal-up">Real Results</p>
-            <h2 class="section__title reveal-up">
+            <p class="kicker reveal-up" data-i18n="res.kicker">Real Results</p>
+            <h2 class="section__title reveal-up" data-i18n-html="res.title">
               Transformations that <span class="stroke">prove it</span>
             </h2>
-            <p class="section__lead reveal-up">
+            <p class="section__lead reveal-up" data-i18n="res.lead">
               Ordinary people. Extraordinary commitment. Real, measurable
               change.
             </p>
@@ -796,24 +923,26 @@
                 <figure>
                   <img
                     src="https://images.unsplash.com/photo-1532384748853-8f54a8f476e2?auto=format&fit=crop&w=400&q=70"
-                    alt="Before"
+                    alt=""
                     loading="lazy"
                   />
-                  <figcaption>BEFORE</figcaption>
+                  <figcaption data-i18n="res.before">BEFORE</figcaption>
                 </figure>
                 <figure>
                   <img
                     src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=400&q=70"
-                    alt="After"
+                    alt=""
                     loading="lazy"
                   />
-                  <figcaption class="after">AFTER</figcaption>
+                  <figcaption class="after" data-i18n="res.after">AFTER</figcaption>
                 </figure>
               </div>
               <div class="result__body">
-                <span class="result__tag">−24 KG FAT LOSS</span>
-                <h3>James M.</h3>
-                <p>
+                <span class="result__tag" data-i18n="res.r1.tag"
+                  >−24 KG FAT LOSS</span
+                >
+                <h3 data-i18n="res.r1.name">James M.</h3>
+                <p data-i18n="res.r1.quote">
                   "Six months at FIT FACTORY rebuilt my body and my confidence.
                   I've never felt stronger."
                 </p>
@@ -825,24 +954,26 @@
                 <figure>
                   <img
                     src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=400&q=70"
-                    alt="Before"
+                    alt=""
                     loading="lazy"
                   />
-                  <figcaption>BEFORE</figcaption>
+                  <figcaption data-i18n="res.before">BEFORE</figcaption>
                 </figure>
                 <figure>
                   <img
                     src="https://images.unsplash.com/photo-1550345332-09e3ac987658?auto=format&fit=crop&w=400&q=70"
-                    alt="After"
+                    alt=""
                     loading="lazy"
                   />
-                  <figcaption class="after">AFTER</figcaption>
+                  <figcaption class="after" data-i18n="res.after">AFTER</figcaption>
                 </figure>
               </div>
               <div class="result__body">
-                <span class="result__tag">+12 KG MUSCLE GAIN</span>
-                <h3>Elena R.</h3>
-                <p>
+                <span class="result__tag" data-i18n="res.r2.tag"
+                  >+12 KG MUSCLE GAIN</span
+                >
+                <h3 data-i18n="res.r2.name">Elena R.</h3>
+                <p data-i18n="res.r2.quote">
                   "The personalized program changed everything. Real coaching,
                   real accountability, real gains."
                 </p>
@@ -856,8 +987,10 @@
       <section class="section section--alt" id="gallery">
         <div class="container">
           <div class="section__head">
-            <p class="kicker reveal-up">Inside The Factory</p>
-            <h2 class="section__title reveal-up">
+            <p class="kicker reveal-up" data-i18n="gal.kicker">
+              Inside The Factory
+            </p>
+            <h2 class="section__title reveal-up" data-i18n-html="gal.title">
               Step into the <span class="stroke">arena</span>
             </h2>
           </div>
@@ -866,6 +999,7 @@
             <figure class="gallery__item gallery__item--tall reveal-up">
               <img
                 src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=700&q=70"
+                data-i18n-attr="alt:gal.a1"
                 alt="Gym interior"
                 loading="lazy"
               />
@@ -873,6 +1007,7 @@
             <figure class="gallery__item reveal-up">
               <img
                 src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=700&q=70"
+                data-i18n-attr="alt:gal.a2"
                 alt="Training session"
                 loading="lazy"
               />
@@ -880,6 +1015,7 @@
             <figure class="gallery__item reveal-up">
               <img
                 src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&w=700&q=70"
+                data-i18n-attr="alt:gal.a3"
                 alt="Equipment"
                 loading="lazy"
               />
@@ -887,6 +1023,7 @@
             <figure class="gallery__item gallery__item--wide reveal-up">
               <img
                 src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=900&q=70"
+                data-i18n-attr="alt:gal.a4"
                 alt="Community event"
                 loading="lazy"
               />
@@ -894,6 +1031,7 @@
             <figure class="gallery__item reveal-up">
               <img
                 src="https://images.unsplash.com/photo-1574680096145-d05b474e2155?auto=format&fit=crop&w=700&q=70"
+                data-i18n-attr="alt:gal.a5"
                 alt="Weight training"
                 loading="lazy"
               />
@@ -901,6 +1039,7 @@
             <figure class="gallery__item gallery__item--tall reveal-up">
               <img
                 src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?auto=format&fit=crop&w=700&q=70"
+                data-i18n-attr="alt:gal.a6"
                 alt="Functional training"
                 loading="lazy"
               />
@@ -908,6 +1047,7 @@
             <figure class="gallery__item reveal-up">
               <img
                 src="https://images.unsplash.com/photo-1593079831268-3381b0db4a77?auto=format&fit=crop&w=700&q=70"
+                data-i18n-attr="alt:gal.a7"
                 alt="Group class"
                 loading="lazy"
               />
@@ -920,8 +1060,8 @@
       <section class="section" id="testimonials">
         <div class="container">
           <div class="section__head">
-            <p class="kicker reveal-up">Member Voices</p>
-            <h2 class="section__title reveal-up">
+            <p class="kicker reveal-up" data-i18n="tst.kicker">Member Voices</p>
+            <h2 class="section__title reveal-up" data-i18n-html="tst.title">
               Loved by our <span class="stroke">community</span>
             </h2>
           </div>
@@ -936,7 +1076,7 @@
                   ><svg viewBox="0 0 24 24"><use href="#i-star" /></svg
                   ><svg viewBox="0 0 24 24"><use href="#i-star" /></svg>
                 </div>
-                <p>
+                <p data-i18n="tst.1.quote">
                   "FIT FACTORY isn't just a gym — it's a mindset. The trainers
                   genuinely care and the energy is unmatched."
                 </p>
@@ -947,7 +1087,8 @@
                     loading="lazy"
                   />
                   <div>
-                    <strong>Nika Baratelis</strong><span>Member · 2 years</span>
+                    <strong data-i18n="tst.1.name">Nika Baratelis</strong
+                    ><span data-i18n="tst.1.role">Member · 2 years</span>
                   </div>
                 </div>
               </article>
@@ -959,7 +1100,7 @@
                   ><svg viewBox="0 0 24 24"><use href="#i-star" /></svg
                   ><svg viewBox="0 0 24 24"><use href="#i-star" /></svg>
                 </div>
-                <p>
+                <p data-i18n="tst.2.quote">
                   "I lost 18kg in five months. The structure, the support, the
                   community — it all just works. Life-changing."
                 </p>
@@ -970,7 +1111,8 @@
                     loading="lazy"
                   />
                   <div>
-                    <strong>Anna Giorgadze</strong><span>Member · 1 year</span>
+                    <strong data-i18n="tst.2.name">Anna Giorgadze</strong
+                    ><span data-i18n="tst.2.role">Member · 1 year</span>
                   </div>
                 </div>
               </article>
@@ -982,7 +1124,7 @@
                   ><svg viewBox="0 0 24 24"><use href="#i-star" /></svg
                   ><svg viewBox="0 0 24 24"><use href="#i-star" /></svg>
                 </div>
-                <p>
+                <p data-i18n="tst.3.quote">
                   "Best equipment in the city and coaches who actually know
                   their craft. I look forward to every session."
                 </p>
@@ -993,8 +1135,8 @@
                     loading="lazy"
                   />
                   <div>
-                    <strong>David Chantladze</strong
-                    ><span>Member · 3 years</span>
+                    <strong data-i18n="tst.3.name">David Chantladze</strong
+                    ><span data-i18n="tst.3.role">Member · 3 years</span>
                   </div>
                 </div>
               </article>
@@ -1006,7 +1148,7 @@
                   ><svg viewBox="0 0 24 24"><use href="#i-star" /></svg
                   ><svg viewBox="0 0 24 24"><use href="#i-star" /></svg>
                 </div>
-                <p>
+                <p data-i18n="tst.4.quote">
                   "From day one I felt welcomed. Now I'm the strongest I've ever
                   been. FIT FACTORY delivers on every promise."
                 </p>
@@ -1017,8 +1159,8 @@
                     loading="lazy"
                   />
                   <div>
-                    <strong>Ana Lobzhanidze</strong
-                    ><span>Member · 18 months</span>
+                    <strong data-i18n="tst.4.name">Ana Lobzhanidze</strong
+                    ><span data-i18n="tst.4.role">Member · 18 months</span>
                   </div>
                 </div>
               </article>
@@ -1041,8 +1183,8 @@
       <section class="section section--alt" id="faq">
         <div class="container container--narrow">
           <div class="section__head">
-            <p class="kicker reveal-up">Questions</p>
-            <h2 class="section__title reveal-up">
+            <p class="kicker reveal-up" data-i18n="faq.kicker">Questions</p>
+            <h2 class="section__title reveal-up" data-i18n-html="faq.title">
               Frequently asked <span class="stroke">questions</span>
             </h2>
           </div>
@@ -1050,10 +1192,11 @@
           <div class="faq">
             <div class="faq__item reveal-up">
               <button class="faq__q" aria-expanded="false">
-                How much does a membership cost?<span class="faq__icon"></span>
+                <span data-i18n="faq.q1">How much does a membership cost?</span
+                ><span class="faq__icon"></span>
               </button>
               <div class="faq__a">
-                <p>
+                <p data-i18n="faq.a1">
                   Memberships start at $29/month for Basic and go up to
                   $99/month for Premium. There are no long-term contracts — you
                   can cancel anytime. Check our Plans section for a full
@@ -1063,10 +1206,11 @@
             </div>
             <div class="faq__item reveal-up">
               <button class="faq__q" aria-expanded="false">
-                Do you offer free trial sessions?<span class="faq__icon"></span>
+                <span data-i18n="faq.q2">Do you offer free trial sessions?</span
+                ><span class="faq__icon"></span>
               </button>
               <div class="faq__a">
-                <p>
+                <p data-i18n="faq.a2">
                   Yes! We offer a complimentary 3-day trial pass for new
                   visitors, including one free group class. Just fill out the
                   contact form and our team will set you up.
@@ -1075,10 +1219,11 @@
             </div>
             <div class="faq__item reveal-up">
               <button class="faq__q" aria-expanded="false">
-                What are your opening hours?<span class="faq__icon"></span>
+                <span data-i18n="faq.q3">What are your opening hours?</span
+                ><span class="faq__icon"></span>
               </button>
               <div class="faq__a">
-                <p>
+                <p data-i18n="faq.a3">
                   We're open every day from 06:00 to 23:00. Premium members
                   enjoy 24/7 priority access with their membership card.
                 </p>
@@ -1086,10 +1231,11 @@
             </div>
             <div class="faq__item reveal-up">
               <button class="faq__q" aria-expanded="false">
-                Is parking available?<span class="faq__icon"></span>
+                <span data-i18n="faq.q4">Is parking available?</span
+                ><span class="faq__icon"></span>
               </button>
               <div class="faq__a">
-                <p>
+                <p data-i18n="faq.a4">
                   Absolutely. We provide free, secure on-site parking for all
                   members, plus dedicated bicycle racks at the main entrance.
                 </p>
@@ -1097,10 +1243,11 @@
             </div>
             <div class="faq__item reveal-up">
               <button class="faq__q" aria-expanded="false">
-                Can I book personal training?<span class="faq__icon"></span>
+                <span data-i18n="faq.q5">Can I book personal training?</span
+                ><span class="faq__icon"></span>
               </button>
               <div class="faq__a">
-                <p>
+                <p data-i18n="faq.a5">
                   Of course. Personal training is included with Standard (2
                   sessions/month) and unlimited with Premium. You can also
                   purchase individual sessions with any of our certified
@@ -1117,11 +1264,11 @@
         <div class="container">
           <div class="contact">
             <div class="contact__info reveal-up">
-              <p class="kicker">Get In Touch</p>
-              <h2 class="section__title">
+              <p class="kicker" data-i18n="con.kicker">Get In Touch</p>
+              <h2 class="section__title" data-i18n-html="con.title">
                 Start your <span class="stroke">transformation</span>
               </h2>
-              <p class="section__lead">
+              <p class="section__lead" data-i18n="con.lead">
                 Book your free trial today. Our team will reach out within 24
                 hours.
               </p>
@@ -1132,8 +1279,8 @@
                     ><svg viewBox="0 0 24 24"><use href="#i-phone" /></svg
                   ></span>
                   <div>
-                    <strong>Phone</strong
-                    ><a href="tel:+995322054240">0 32 2 054 240</a>
+                    <strong data-i18n="con.phone.label">Phone</strong
+                    ><a href="tel:+995322054240">+995 32 2 054 240</a>
                   </div>
                 </li>
                 <li>
@@ -1141,7 +1288,7 @@
                     ><svg viewBox="0 0 24 24"><use href="#i-mail" /></svg
                   ></span>
                   <div>
-                    <strong>Email</strong
+                    <strong data-i18n="con.email.label">Email</strong
                     ><a href="mailto:hello@fitfactory.com"
                       >hello@fitfactory.com</a
                     >
@@ -1152,8 +1299,10 @@
                     ><svg viewBox="0 0 24 24"><use href="#i-pin" /></svg
                   ></span>
                   <div>
-                    <strong>Address</strong
-                    ><span>თბილისი, ბ. კვერნაძის N7 / პ. ასლანიდის N12</span>
+                    <strong data-i18n="con.addr.label">Address</strong
+                    ><span data-i18n="con.addr.value"
+                      >თბილისი, ბ. კვერნაძის N7 / პ. ასლანიდის N12</span
+                    >
                   </div>
                 </li>
               </ul>
@@ -1177,7 +1326,7 @@
                   required
                   placeholder=" "
                 />
-                <label for="name">Full Name</label>
+                <label for="name" data-i18n="form.name">Full Name</label>
               </div>
               <div class="field">
                 <input
@@ -1187,19 +1336,23 @@
                   required
                   placeholder=" "
                 />
-                <label for="email">Email Address</label>
+                <label for="email" data-i18n="form.email">Email Address</label>
               </div>
               <div class="field">
                 <input type="tel" id="phone" name="phone" placeholder=" " />
-                <label for="phone">Phone Number</label>
+                <label for="phone" data-i18n="form.phone">Phone Number</label>
               </div>
               <div class="field">
                 <select id="goal" name="goal" required>
-                  <option value="" disabled selected>Choose your goal</option>
-                  <option>Weight Loss</option>
-                  <option>Muscle Gain</option>
-                  <option>Strength Training</option>
-                  <option>General Fitness</option>
+                  <option value="" disabled selected data-i18n="form.goal.ph">
+                    Choose your goal
+                  </option>
+                  <option data-i18n="form.goal.weight">Weight Loss</option>
+                  <option data-i18n="form.goal.muscle">Muscle Gain</option>
+                  <option data-i18n="form.goal.strength">
+                    Strength Training
+                  </option>
+                  <option data-i18n="form.goal.general">General Fitness</option>
                 </select>
               </div>
               <div class="field">
@@ -1209,14 +1362,19 @@
                   rows="4"
                   placeholder=" "
                 ></textarea>
-                <label for="message">Message (optional)</label>
+                <label for="message" data-i18n="form.message"
+                  >Message (optional)</label
+                >
               </div>
-              <button type="submit" class="btn btn--solid btn--block">
+              <button
+                type="submit"
+                class="btn btn--solid btn--block"
+                data-i18n="form.submit"
+              >
                 Claim Free Trial
               </button>
-              <p class="contact__note" id="formNote" hidden>
-                ✓ Thanks! Your request has been received. We'll be in touch
-                soon.
+              <p class="contact__note" id="formNote" hidden data-i18n="form.note">
+                Thanks! Your request has been received. We'll be in touch soon.
               </p>
             </form>
           </div>
@@ -1237,7 +1395,7 @@
             />
             <span class="brand__name">FIT<span>FACTORY</span></span>
           </a>
-          <p>
+          <p data-i18n="foot.brand.desc">
             Where transformation happens. Train smarter. Move faster. Become
             stronger.
           </p>
@@ -1312,35 +1470,250 @@
         </div>
 
         <nav class="footer__nav" aria-label="Footer">
-          <h4>Explore</h4>
-          <a href="#why">Why Us</a>
-          <a href="#services">Services</a>
-          <a href="#plans">Plans</a>
-          <a href="#trainers">Trainers</a>
+          <h4 data-i18n="foot.explore">Explore</h4>
+          <a href="#why" data-i18n="nav.why">Why Us</a>
+          <a href="#services" data-i18n="nav.services">Services</a>
+          <a href="#plans" data-i18n="nav.plans">Plans</a>
+          <a href="#trainers" data-i18n="nav.trainers">Trainers</a>
         </nav>
         <nav class="footer__nav" aria-label="Footer secondary">
-          <h4>Company</h4>
-          <a href="#results">Results</a>
-          <a href="#gallery">Gallery</a>
-          <a href="#faq">FAQ</a>
-          <a href="#contact">Contact</a>
+          <h4 data-i18n="foot.company">Company</h4>
+          <a href="#results" data-i18n="nav.results">Results</a>
+          <a href="#gallery" data-i18n="nav.gallery">Gallery</a>
+          <a href="#faq" data-i18n="nav.faq">FAQ</a>
+          <a href="#contact" data-i18n="nav.contact">Contact</a>
         </nav>
         <div class="footer__nav">
-          <h4>Hours</h4>
-          <p>Mon – Sun</p>
-          <p>06:00 — 23:00</p>
-          <p>Premium · 24/7</p>
+          <h4 data-i18n="foot.hours">Hours</h4>
+          <p data-i18n="foot.hours.days">Mon – Sun</p>
+          <p data-i18n="foot.hours.time">06:00 — 23:00</p>
+          <p data-i18n="foot.hours.premium">Premium · 24/7</p>
         </div>
       </div>
       <div class="footer__bottom container">
-        <p>© <span id="year">2026</span> FIT FACTORY. All rights reserved.</p>
-        <p>Built for those who refuse to settle.</p>
+        <p>
+          © <span id="year">2026</span>
+          <span data-i18n="foot.copy">FIT FACTORY. All rights reserved.</span>
+        </p>
+        <p data-i18n="foot.tagline">Built for those who refuse to settle.</p>
       </div>
     </footer>
 
-    <!-- GSAP -->
+    <!-- ===== BACK TO TOP ===== -->
+    <button
+      class="backtop"
+      id="backTop"
+      type="button"
+      data-i18n-attr="aria-label:a11y.backtop"
+      aria-label="Back to top"
+    >
+      <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+        <path
+          d="M12 19V6M6 12l6-6 6 6"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.7"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </button>
+
+    <!-- ===== JOIN MODAL (multi-step) ===== -->
+    <div class="jmodal" id="joinModal" aria-hidden="true">
+      <div class="jmodal__backdrop" data-close-join></div>
+      <div
+        class="jmodal__panel"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="jmTitle"
+      >
+        <button
+          class="jmodal__close"
+          type="button"
+          data-close-join
+          data-i18n-attr="aria-label:modal.close"
+          aria-label="Close"
+        >
+          <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+            <path
+              d="M6 6l12 12M18 6L6 18"
+              stroke="currentColor"
+              stroke-width="1.6"
+              stroke-linecap="round"
+            />
+          </svg>
+        </button>
+
+        <aside class="jmodal__aside">
+          <p class="jmodal__eyebrow" data-i18n="modal.eyebrow">Membership</p>
+          <h2 class="jmodal__title" id="jmTitle" data-i18n="modal.t1">
+            Choose your plan
+          </h2>
+          <div class="jmodal__steps" aria-hidden="true">
+            <span class="jmodal__dot is-active" data-dot="1"></span>
+            <span class="jmodal__dot" data-dot="2"></span>
+            <span class="jmodal__dot" data-dot="3"></span>
+          </div>
+          <p class="jmodal__stepinfo">
+            <span data-i18n="modal.step">Step</span>
+            <b data-jm-cur>1</b> <span data-i18n="modal.of">of</span> 3
+          </p>
+          <div class="jmodal__summary" hidden>
+            <span data-i18n="modal.summary">Selected plan</span>
+            <strong data-jm-summary>—</strong>
+          </div>
+        </aside>
+
+        <div class="jmodal__main">
+          <!-- Step 1: plans -->
+          <div class="jmodal__step is-active" data-step="1">
+            <div class="jplans">
+              <button type="button" class="jplan" data-plan="basic">
+                <span class="jplan__name" data-i18n="plan.basic.name">BASIC</span>
+                <span class="jplan__price"
+                  ><span class="cur">$</span>29<small data-i18n="plan.per"
+                    >/mo</small
+                  ></span
+                >
+                <span class="jplan__desc" data-i18n="plan.basic.desc"
+                  >Everything you need to start strong.</span
+                >
+                <span class="jplan__check" aria-hidden="true"></span>
+              </button>
+              <button type="button" class="jplan jplan--featured" data-plan="std">
+                <span class="jplan__badge" data-i18n="plan.std.badge"
+                  >MOST POPULAR</span
+                >
+                <span class="jplan__name" data-i18n="plan.std.name"
+                  >STANDARD</span
+                >
+                <span class="jplan__price"
+                  ><span class="cur">$</span>59<small data-i18n="plan.per"
+                    >/mo</small
+                  ></span
+                >
+                <span class="jplan__desc" data-i18n="plan.std.desc"
+                  >The complete training experience.</span
+                >
+                <span class="jplan__check" aria-hidden="true"></span>
+              </button>
+              <button type="button" class="jplan" data-plan="prem">
+                <span class="jplan__name" data-i18n="plan.prem.name"
+                  >PREMIUM</span
+                >
+                <span class="jplan__price"
+                  ><span class="cur">$</span>99<small data-i18n="plan.per"
+                    >/mo</small
+                  ></span
+                >
+                <span class="jplan__desc" data-i18n="plan.prem.desc"
+                  >Elite, fully personalized coaching.</span
+                >
+                <span class="jplan__check" aria-hidden="true"></span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Step 2: details -->
+          <div class="jmodal__step" data-step="2">
+            <form class="jform" id="joinForm" novalidate>
+              <div class="field">
+                <input type="text" id="jName" name="name" required placeholder=" " />
+                <label for="jName" data-i18n="form.name">Full Name</label>
+              </div>
+              <div class="field">
+                <input type="tel" id="jPhone" name="phone" required placeholder=" " />
+                <label for="jPhone" data-i18n="form.phone">Phone Number</label>
+              </div>
+              <div class="field">
+                <input type="email" id="jEmail" name="email" required placeholder=" " />
+                <label for="jEmail" data-i18n="form.email">Email Address</label>
+              </div>
+              <div class="field">
+                <select id="jGoal" name="goal" required>
+                  <option value="" disabled selected data-i18n="form.goal.ph">
+                    Choose your goal
+                  </option>
+                  <option data-i18n="form.goal.weight">Weight Loss</option>
+                  <option data-i18n="form.goal.muscle">Muscle Gain</option>
+                  <option data-i18n="form.goal.strength">
+                    Strength Training
+                  </option>
+                  <option data-i18n="form.goal.general">General Fitness</option>
+                </select>
+              </div>
+            </form>
+          </div>
+
+          <!-- Step 3: success -->
+          <div class="jmodal__step jmodal__success" data-step="3">
+            <span class="jmodal__success-mark" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="34" height="34">
+                <path
+                  d="M5 13l4 4L19 7"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </span>
+            <h3 data-i18n="modal.success.title">Welcome to the Factory</h3>
+            <p data-i18n="modal.success.text">
+              Your request is in. Our team will reach out shortly to activate
+              your membership.
+            </p>
+          </div>
+
+          <div class="jmodal__actions">
+            <button
+              type="button"
+              class="btn btn--ghost"
+              data-jm-back
+              data-i18n="modal.back"
+              hidden
+            >
+              Back
+            </button>
+            <button
+              type="button"
+              class="btn btn--solid"
+              data-jm-next
+              data-i18n="modal.next"
+            >
+              Continue
+            </button>
+            <button
+              type="button"
+              class="btn btn--solid"
+              data-jm-submit
+              data-i18n="modal.submit"
+              hidden
+            >
+              Complete sign-up
+            </button>
+            <button
+              type="button"
+              class="btn btn--solid btn--block"
+              data-close-join
+              data-jm-done
+              data-i18n="modal.success.cta"
+              hidden
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.20/dist/lenis.min.js"></script>
+    <script src="i18n.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
