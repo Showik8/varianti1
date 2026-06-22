@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//private/tmp/**)",
+      "Bash(npx --no-install playwright --version)",
+      "Read(//Users/macbook/.cache/**)",
+      "Bash(python3 -c \"import playwright; print\\('pw-installed', playwright.__version__ if hasattr\\(playwright,'__version__'\\) else 'ok'\\)\")",
+      "Read(//Users/macbook/Library/Caches/ms-playwright/**)",
+      "Read(//tmp/**)",
+      "Bash(pkill -f \"http.server 8123\")"
+    ]
+  }
+}
